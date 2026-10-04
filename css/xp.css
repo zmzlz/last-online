@@ -1,0 +1,163 @@
+/* ============================================================
+   Last Online - XP 组件样式 (Neo XP)
+   Windows XP Luna 复刻
+   ============================================================ */
+
+/* ===== XP 窗口 ===== */
+.xp-window{
+  background:#ECE9D8;
+  border:1px solid #0831D9;
+  border-radius:8px 8px 0 0;
+  box-shadow:2px 2px 0 #003 inset, 4px 4px 12px rgba(0,0,0,.45);
+  display:flex;flex-direction:column;
+  overflow:hidden;
+  animation:winOpen .14s ease-out;
+}
+.xp-window .title-bar{
+  height:28px;line-height:28px;
+  padding:0 4px 0 6px;
+  background:linear-gradient(to bottom,#0a64c8 0,#1d80e7 3%,#0a4fb5 6%,#0a57d6 10%,#0a4fb5 12%,#1e6fd8 20%,#3994ff 40%,#2f8bff 55%,#0a57d6 92%,#0a4fb5 96%,#1d80e7 100%);
+  color:#fff;font-weight:bold;font-size:13px;
+  display:flex;align-items:center;justify-content:space-between;
+  text-shadow:1px 1px 1px rgba(0,0,0,.6);
+  cursor:default;
+}
+.xp-window .title-bar .tb-title{display:flex;align-items:center;gap:6px;overflow:hidden;white-space:nowrap;}
+.xp-window .title-bar .tb-icon{width:16px;height:16px;display:inline-block;}
+.xp-window .title-bar .tb-controls{display:flex;gap:2px;}
+.xp-window .tb-btn{
+  width:22px;height:20px;border:1px solid #fff;
+  background:linear-gradient(to bottom,#3996ff,#0a57d6);
+  color:#fff;font-size:11px;font-family:Marlett,"Tahoma";
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;border-radius:3px;
+  text-shadow:1px 1px 0 rgba(0,0,0,.4);
+}
+.xp-window .tb-btn:hover{background:linear-gradient(to bottom,#5aa8ff,#1d70e0);}
+.xp-window .tb-btn.close{background:linear-gradient(to bottom,#e8772f,#b5390a);}
+.xp-window .tb-btn.close:hover{background:linear-gradient(to bottom,#f08a44,#c44615);}
+.xp-window .win-body{flex:1;background:#ECE9D8;padding:10px;overflow:auto;}
+.xp-window .status-bar{
+  height:20px;line-height:18px;font-size:11px;color:#333;
+  background:#ECE9D8;border-top:1px solid #aca899;
+  padding:0 8px;display:flex;justify-content:space-between;
+}
+.xp-window .status-bar span{border:1px solid #aca899;padding:0 8px;background:#fff;height:16px;line-height:14px;}
+
+/* ===== XP 按钮 ===== */
+.xp-btn{
+  display:inline-block;
+  min-width:72px;height:24px;padding:0 12px;
+  border:1px solid #003c74;
+  border-radius:3px;
+  background:linear-gradient(to bottom,#fdfdfd 0,#f3f3f3 45%,#d8d8d8 50%,#ececec 90%,#e8e8e8 100%);
+  color:#222;font-size:12px;cursor:pointer;
+  box-shadow:inset 0 0 0 1px #fff;
+  line-height:22px;text-align:center;
+}
+.xp-btn:hover{border-color:#f5a623;background:linear-gradient(to bottom,#fefdfd,#f7f0e0 50%,#f0e0c0 90%);}
+.xp-btn:active{padding-top:1px;background:linear-gradient(to bottom,#dedede,#e8e8e8);}
+.xp-btn.primary{
+  min-width:72px;height:24px;
+  border:1px solid #003c74;border-radius:3px;
+  background:linear-gradient(to bottom,#5aa1e8 0%,#2a73d6 45%,#1d5fc4 50%,#2e74d8 90%,#2a6fd0 100%);
+  color:#fff;
+  box-shadow:inset 0 0 0 1px #6fb0f0;
+}
+.xp-btn.primary:hover{background:linear-gradient(to bottom,#6cb4ff,#3a86e6 50%,#2a73d6);}
+.xp-btn.primary:active{background:linear-gradient(to bottom,#1d5fc4,#2a73d6);}
+.xp-btn:disabled{color:#888;border-color:#aaa;background:#eee;cursor:not-allowed;}
+.xp-btn:focus{outline:1px dotted #333;outline-offset:-3px;}
+
+/* ===== XP 任务栏 ===== */
+.xp-taskbar{
+  position:absolute;left:0;right:0;bottom:0;height:30px;
+  background:linear-gradient(to bottom,#2475e8 0,#2c7bf0 8%,#1c63d6 40%,#1957c4 88%,#1a4fb0 96%,#1546a0 100%);
+  border-top:1px solid #0848b0;
+  box-shadow:0 0 0 1px #0831d9, inset 1px 0 0 #4d8bf0;
+  display:flex;align-items:center;
+  z-index:9000;
+}
+.xp-start{
+  width:104px;height:28px;margin-left:2px;
+  border-radius:0 12px 12px 0;
+  background:linear-gradient(to bottom,#4ba624 0,#5cb830 8%,#3d8c16 40%,#347a0f 88%,#2f7009 96%,#276204 100%);
+  color:#fff;font-weight:bold;font-style:italic;font-size:15px;
+  display:flex;align-items:center;justify-content:flex-end;gap:4px;
+  padding-right:10px;cursor:pointer;
+  text-shadow:1px 1px 2px rgba(0,0,0,.5);
+  box-shadow:inset 0 0 0 1px #6fc945;
+}
+.xp-start:hover{filter:brightness(1.08);}
+.xp-start .start-icon{width:18px;height:18px;}
+.xp-taskbar .task-tasks{flex:1;display:flex;align-items:center;gap:3px;padding:0 6px;}
+.xp-task-item{
+  height:22px;min-width:120px;max-width:160px;
+  background:linear-gradient(to bottom,#3c8bf0,#1d63d6);
+  border:1px solid #0a3a8a;border-radius:3px;color:#fff;
+  font-size:12px;display:flex;align-items:center;gap:4px;padding:0 8px;
+  cursor:pointer;overflow:hidden;white-space:nowrap;
+  text-shadow:1px 1px 1px rgba(0,0,0,.4);
+}
+.xp-task-item.active{background:linear-gradient(to bottom,#1d63d6,#0a3a8a);}
+.xp-taskbar .tray{
+  height:28px;padding:0 8px;margin-right:2px;
+  background:linear-gradient(to bottom,#1290e8 0,#1290e8 50%,#1d8bf0 51%,#0f6fc8 100%);
+  border-left:1px solid #0a4fb5;border-radius:3px;
+  display:flex;align-items:center;gap:6px;color:#fff;font-size:11px;
+}
+.xp-clock{font-family:Tahoma;font-size:12px;color:#fff;letter-spacing:.5px;}
+
+/* ===== XP 对话框 ===== */
+.xp-dialog-mask{
+  position:absolute;inset:0;background:rgba(0,0,0,.25);
+  display:flex;align-items:center;justify-content:center;z-index:9500;
+  animation:fadeIn .1s;
+}
+.xp-dialog{
+  width:340px;background:#ECE9D8;border:1px solid #0831D9;border-radius:8px 8px 0 0;
+  box-shadow:4px 4px 12px rgba(0,0,0,.5);overflow:hidden;
+  animation:winOpen .14s;
+}
+.xp-dialog .dlg-body{
+  padding:18px 14px;display:flex;gap:12px;align-items:flex-start;
+  background:#ECE9D8;
+}
+.xp-dialog .dlg-icon{
+  width:32px;height:32px;flex:none;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-weight:bold;
+  font-size:20px;color:#fff;
+}
+.dlg-icon.info{background:linear-gradient(to bottom,#5aa1e8,#1d5fc4);}
+.dlg-icon.warn{background:linear-gradient(to bottom,#ffd24a,#e89a00);color:#5a3d00;}
+.dlg-icon.error{background:linear-gradient(to bottom,#ff6a4a,#c0290a);}
+.dlg-icon.question{background:linear-gradient(to bottom,#5aa1e8,#1d5fc4);}
+.xp-dialog .dlg-content{flex:1;font-size:12px;line-height:1.6;color:#222;}
+.xp-dialog .dlg-content b{display:block;font-size:13px;margin-bottom:4px;}
+.xp-dialog .dlg-actions{
+  text-align:center;padding:10px;border-top:1px solid #d4d0c8;background:#ECE9D8;
+  display:flex;justify-content:center;gap:8px;
+}
+
+/* ===== XP 输入框 ===== */
+.xp-input{
+  height:22px;border:1px solid #7F9DB9;background:#fff;
+  padding:0 4px;font-size:12px;color:#222;
+  outline:none;
+}
+.xp-input:focus{border-color:#f5a623;}
+textarea.xp-input{height:auto;padding:4px;line-height:1.5;resize:none;}
+
+/* ===== XP 字段集 ===== */
+.xp-fieldset{
+  border:1px solid #aca899;padding:8px;margin:6px 0;
+  color:#0033cc;font-size:12px;
+}
+.xp-fieldset legend{padding:0 4px;color:#0033cc;}
+
+/* ===== 工具提示 ===== */
+.xp-tip{
+  position:absolute;background:#ffffe1;border:1px solid #000;
+  padding:2px 6px;font-size:11px;color:#000;z-index:9600;
+  box-shadow:2px 2px 4px rgba(0,0,0,.3);pointer-events:none;
+}

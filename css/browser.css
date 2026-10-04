@@ -1,0 +1,83 @@
+/* ============================================================
+   Last Online - IE6 浏览器外壳样式
+   ============================================================ */
+.ie-shell{
+  position:absolute;inset:0 0 30px 0;
+  display:flex;flex-direction:column;
+  background:#ECE9D8;
+}
+.ie-title{
+  height:26px;line-height:26px;
+  background:linear-gradient(to bottom,#0a64c8 0,#1d80e7 3%,#0a4fb5 6%,#0a57d6 10%,#0a4fb5 12%,#1e6fd8 20%,#3994ff 40%,#2f8bff 55%,#0a57d6 92%,#0a4fb5 96%,#1d80e7 100%);
+  color:#fff;font-size:12px;font-weight:bold;padding-left:6px;
+  display:flex;align-items:center;justify-content:space-between;
+  text-shadow:1px 1px 1px rgba(0,0,0,.5);
+}
+.ie-title .ie-title-text{display:flex;align-items:center;gap:6px;}
+.ie-title .ie-controls{display:flex;gap:2px;padding-right:3px;}
+.ie-icon{width:16px;height:16px;display:inline-block;flex:none;}
+
+/* 菜单栏 */
+.ie-menubar{
+  height:20px;line-height:20px;font-size:12px;
+  background:#ECE9D8;border-bottom:1px solid #aca899;
+  padding:0 4px;display:flex;gap:2px;color:#222;
+}
+.ie-menubar span{padding:0 6px;cursor:default;}
+.ie-menubar span:hover{background:#316ac5;color:#fff;}
+
+/* 工具栏 */
+.ie-toolbar{
+  background:linear-gradient(to bottom,#f6f5ee,#e3e0d2);
+  border-bottom:1px solid #aca899;
+  padding:3px 4px;display:flex;align-items:center;gap:6px;font-size:12px;
+}
+.ie-btn{
+  width:26px;height:26px;border:1px solid transparent;
+  display:flex;align-items:center;justify-content:center;
+  cursor:default;color:#444;border-radius:3px;
+  background:transparent;
+}
+.ie-btn.enabled{cursor:pointer;color:#1d5fc4;}
+.ie-btn.enabled:hover{border-color:#f5a623;background:#fff8e8;}
+.ie-btn.enabled:active{background:#f0e0c0;}
+.ie-btn .ie-glyph{font-size:15px;font-weight:bold;line-height:1;}
+.ie-sep{width:1px;height:20px;background:#aca899;margin:0 3px;}
+.ie-address-label{margin-left:6px;color:#222;font-size:12px;}
+
+/* 地址栏 */
+.ie-address{
+  flex:1;height:22px;display:flex;align-items:center;
+  border:1px solid #7F9DB9;background:#fff;
+}
+.ie-address .addr-icon{width:16px;height:16px;margin:0 4px;}
+.ie-address input{
+  flex:1;border:0;height:20px;background:transparent;outline:none;
+  font-size:12px;color:#222;padding:0 2px;
+}
+.ie-go{margin-left:4px;}
+
+/* 页面区 */
+.ie-page{
+  flex:1;background:#fff;overflow:auto;position:relative;
+  border-bottom:1px solid #aca899;
+}
+.ie-loading{
+  position:absolute;left:0;top:0;height:3px;width:0;
+  background:linear-gradient(to right,#1d80e7,#7fd0ff);
+  transition:width .25s;z-index:2;
+}
+.ie-content{width:100%;min-height:100%;}
+
+/* 状态栏 */
+.ie-status{
+  height:20px;line-height:18px;font-size:11px;
+  background:#ECE9D8;border-top:1px solid #aca899;
+  display:flex;align-items:center;padding:0 6px;gap:8px;color:#222;
+}
+.ie-status .s-zone{border:1px solid #aca899;border-top:none;background:#fff;padding:0 8px;height:16px;line-height:14px;}
+.ie-status .s-msg{flex:1;}
+
+/* IE 图标字体(简易) */
+.ie-favicon{display:inline-block;width:16px;height:16px;background:#1d80e7;border-radius:2px;position:relative;flex:none;}
+.ie-favicon::after{content:"e";position:absolute;inset:0;color:#fff;font-family:serif;font-size:11px;font-style:italic;font-weight:bold;text-align:center;line-height:16px;}

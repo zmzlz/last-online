@@ -1,0 +1,254 @@
+/* ============================================================
+   Last Online - 网站页面样式 (2003 门户/论坛风格)
+   固定宽度 980px 居中
+   ============================================================ */
+.lo-site{
+  width:980px;margin:0 auto;background:#fff;
+  min-height:100%;
+  font-size:13px;color:#222;
+  position:relative;
+}
+
+/* LOGO 区 */
+.lo-logo{
+  background:linear-gradient(to bottom,#1d6fd8,#0a4fb5);
+  height:78px;position:relative;overflow:hidden;
+  border-bottom:2px solid #f5a623;
+  display:flex;align-items:center;padding:0 20px;
+}
+.lo-logo .logo-text{
+  font-family:"Trebuchet MS","Microsoft YaHei";
+  font-size:34px;font-weight:bold;color:#fff;
+  text-shadow:2px 2px 0 #05398f, 0 0 10px rgba(120,180,255,.6);
+  letter-spacing:1px;
+}
+.lo-logo .logo-sub{
+  color:#bcd6ff;font-size:13px;margin-left:14px;
+  font-family:"Trebuchet MS";
+}
+.lo-logo .logo-since{
+  position:absolute;right:18px;top:10px;color:#bcd6ff;font-size:12px;font-style:italic;
+}
+.lo-logo .logo-banner{
+  position:absolute;right:18px;bottom:8px;color:#ffe9b8;font-size:13px;
+  animation:flicker 4s infinite;
+}
+
+/* 导航栏 */
+.lo-nav{
+  background:linear-gradient(to bottom,#2f8bff,#0a57d6);
+  height:30px;display:flex;border-bottom:1px solid #05398f;
+}
+.lo-nav a{
+  flex:1;line-height:30px;text-align:center;color:#fff;
+  font-size:13px;text-decoration:none;font-weight:bold;
+  border-right:1px solid #5ea8ff;text-shadow:1px 1px 1px rgba(0,0,0,.4);
+  transition:background .1s;
+}
+.lo-nav a:first-child{border-left:1px solid #5ea8ff;}
+.lo-nav a:hover{background:linear-gradient(to bottom,#5ea8ff,#1d80e7);color:#fff;}
+.lo-nav a:active{background:#0a4fb5;}
+.lo-nav a.locked{color:#bcd6ff;cursor:not-allowed;}
+.lo-nav a.cur{background:linear-gradient(to bottom,#0a4fb5,#0a4fb5);}
+
+/* 三栏布局 */
+.lo-cols{display:flex;background:#fff;}
+.lo-side{width:160px;background:#f3f6ff;border-right:1px solid #b9c9e8;padding:8px;font-size:12px;}
+.lo-main{flex:1;padding:12px;min-height:380px;}
+.lo-info{width:180px;background:#f3f6ff;border-left:1px solid #b9c9e8;padding:8px;font-size:12px;}
+
+/* 公告 / 信息盒子 */
+.lo-box{border:1px solid #7F9DB9;margin-bottom:8px;background:#fff;}
+.lo-box .box-head{
+  background:linear-gradient(to bottom,#2f8bff,#0a57d6);
+  color:#fff;padding:3px 8px;font-size:12px;font-weight:bold;
+  text-shadow:1px 1px 1px rgba(0,0,0,.3);
+}
+.lo-box .box-body{padding:6px 8px;font-size:12px;line-height:1.7;}
+
+/* 在线人数 */
+.online-count{
+  text-align:center;padding:8px 4px;font-size:12px;color:#222;
+}
+.online-count .num{
+  font-family:"Trebuchet MS";font-size:30px;font-weight:bold;color:#c00;
+  text-shadow:1px 1px 0 #f5d6a8;display:block;line-height:1.1;
+}
+.online-count.final .num{color:#7a0000;animation:blink 1.4s infinite;}
+
+/* 论坛列表 */
+.forum-list{width:100%;border-collapse:collapse;background:#fff;}
+.forum-list th{
+  background:linear-gradient(to bottom,#2f8bff,#0a57d6);color:#fff;
+  font-size:12px;padding:5px 8px;text-align:left;text-shadow:1px 1px 1px rgba(0,0,0,.3);
+  border-bottom:1px solid #05398f;
+}
+.forum-list td{padding:6px 8px;border-bottom:1px dashed #d8e0f0;font-size:12px;}
+.forum-list tr:nth-child(even) td{background:#f6f9ff;}
+.forum-list tr:hover td{background:#fff8e8;cursor:pointer;}
+.forum-list .col-title{width:46%;}
+.forum-list .col-author{width:18%;}
+.forum-list .col-replies{width:12%;text-align:center;}
+.forum-list .col-time{width:24%;}
+.forum-list .tag{display:inline-block;background:#0a57d6;color:#fff;font-size:10px;padding:0 4px;border-radius:2px;margin-right:4px;}
+.forum-list .tag.anomaly{background:#c00;}
+
+/* 帖子详情 */
+.post-wrap{font-size:13px;}
+.post-title{font-size:18px;font-weight:bold;color:#0a57d6;border-bottom:2px solid #b9c9e8;padding-bottom:6px;margin-bottom:10px;}
+.post-row{display:flex;border:1px solid #b9c9e8;margin-bottom:8px;background:#fff;}
+.post-left{
+  width:140px;background:#f0f4ff;padding:8px;text-align:center;
+  border-right:1px solid #b9c9e8;font-size:12px;flex:none;
+}
+.post-avatar{
+  width:64px;height:64px;margin:4px auto;background:#bcd6ff;
+  border:2px solid #7F9DB9;display:flex;align-items:center;justify-content:center;
+  font-size:24px;color:#0a57d6;font-weight:bold;
+}
+.post-left .uname{font-weight:bold;color:#0a57d6;margin:4px 0 2px;}
+.post-left .umeta{color:#666;font-size:11px;}
+.post-left .ustat{margin-top:4px;font-size:11px;color:#0a8a0a;}
+.post-right{flex:1;padding:10px;line-height:1.7;}
+.post-right .ptime{font-size:11px;color:#666;text-align:right;margin-bottom:6px;}
+.post-right .pcontent{font-size:13px;}
+.post-right .anomaly{color:#c00;font-style:italic;}
+.signature{margin-top:8px;border-top:1px dashed #b9c9e8;padding-top:6px;color:#666;font-size:11px;}
+
+/* 相册 */
+.photo-grid{display:flex;flex-wrap:wrap;gap:8px;}
+.photo-thumb{
+  width:180px;border:2px solid #7F9DB9;background:#fff;padding:4px;cursor:pointer;
+}
+.photo-thumb:hover{border-color:#f5a623;}
+.photo-thumb .ph-img{
+  width:100%;height:135px;background:#d8d8d8;position:relative;overflow:hidden;
+  border:1px solid #aaa;
+}
+.photo-thumb .ph-name{font-size:12px;text-align:center;margin-top:4px;color:#333;}
+
+/* 照片查看器 */
+.photo-viewer-img{
+  width:480px;height:360px;background:#c8c8c8;margin:0 auto;position:relative;
+  border:1px solid #555;overflow:hidden;
+}
+.photo-meta{margin-top:8px;font-size:12px;color:#333;background:#fff;border:1px solid #aca899;padding:8px;}
+.photo-meta table{width:100%;font-size:12px;}
+.photo-meta td{padding:2px 6px;border-bottom:1px dotted #ddd;}
+.photo-meta td:first-child{width:90px;color:#666;font-weight:bold;}
+
+/* 聊天室 */
+.chat-wrap{border:1px solid #7F9DB9;background:#fff;}
+.chat-head{background:linear-gradient(to bottom,#2f8bff,#0a57d6);color:#fff;padding:5px 10px;font-weight:bold;font-size:13px;text-shadow:1px 1px 1px rgba(0,0,0,.3);}
+.chat-layout{display:flex;height:380px;}
+.chat-users{width:130px;border-right:1px solid #b9c9e8;background:#f3f6ff;padding:6px;font-size:12px;overflow:auto;}
+.chat-users .cu{padding:2px 4px;display:flex;align-items:center;gap:4px;}
+.chat-users .cu .dot{width:7px;height:7px;border-radius:50%;background:#0a8a0a;}
+.chat-users .cu.sys .dot{background:#c00;}
+.chat-log{flex:1;padding:8px;overflow:auto;font-size:12px;line-height:1.6;background:#fff;}
+.chat-line{margin-bottom:6px;}
+.chat-line .cl-time{color:#888;margin-right:6px;font-size:11px;}
+.chat-line .cl-user{font-weight:bold;color:#0a57d6;}
+.chat-line .cl-user.admin{color:#c00;}
+.chat-line .cl-user.system{color:#0a8a0a;}
+.chat-line .cl-msg{color:#222;}
+.chat-line.system .cl-msg{color:#0a8a0a;font-style:italic;}
+.chat-line.unknown{color:#c00;}
+.chat-input{border-top:1px solid #b9c9e8;padding:6px;display:flex;gap:6px;background:#f3f6ff;}
+.chat-input input{flex:1;}
+.chat-input .xp-btn{min-width:60px;}
+
+/* 下载中心 */
+.dl-list{width:100%;border-collapse:collapse;}
+.dl-list th{background:linear-gradient(to bottom,#2f8bff,#0a57d6);color:#fff;text-align:left;padding:5px 8px;font-size:12px;text-shadow:1px 1px 1px rgba(0,0,0,.3);}
+.dl-list td{padding:5px 8px;border-bottom:1px dashed #d8e0f0;font-size:12px;}
+.dl-list tr:hover td{background:#fff8e8;cursor:pointer;}
+.dl-icon{width:16px;height:16px;display:inline-block;margin-right:4px;vertical-align:middle;}
+.dl-icon.zip{background:#c9a04a;}
+.dl-icon.rar{background:#8a4ac9;}
+.dl-icon.txt{background:#5a8ac9;}
+.dl-icon.jpg{background:#4ac98a;}
+.dl-icon.exe{background:#c94a4a;}
+.dl-icon.dat{background:#555;}
+.dl-icon.db{background:#777;}
+
+/* 模拟下载窗 */
+.dl-progress{width:100%;height:14px;border:1px solid #7F9DB9;background:#fff;margin:6px 0;}
+.dl-progress .bar{height:100%;width:0;background:linear-gradient(to right,#1d80e7,#7fd0ff);transition:width .2s;}
+.dl-extract-list{font-family:"Tahoma";font-size:12px;background:#fff;border:1px solid #7F9DB9;padding:8px;margin-top:6px;max-height:160px;overflow:auto;}
+
+/* 文件查看器 (txt) */
+.file-viewer{background:#fff;color:#222;font-family:"Tahoma","Consolas",monospace;font-size:12px;line-height:1.6;padding:10px;white-space:pre-wrap;border:1px solid #7F9DB9;}
+.file-viewer .hidden-msg{color:#aaa;}
+.file-viewer .hidden-msg.revealed{color:#c00;font-style:italic;}
+
+/* 管理员后台 */
+.admin-panel{background:#2b2b2b;color:#c8c8c8;min-height:380px;font-family:"Tahoma","Consolas",monospace;font-size:12px;}
+.admin-head{background:#111;color:#7fd0ff;padding:6px 10px;font-size:14px;font-weight:bold;border-bottom:1px solid #444;letter-spacing:2px;}
+.admin-sub{background:#1a1a1a;padding:4px 10px;color:#0a8a0a;border-bottom:1px solid #333;font-size:12px;}
+.admin-login{padding:30px;text-align:center;color:#ccc;}
+.admin-login input{margin:6px 0;}
+.admin-table{width:100%;border-collapse:collapse;font-size:12px;}
+.admin-table th{background:#1a1a1a;color:#7fd0ff;text-align:left;padding:5px 8px;border-bottom:1px solid #444;position:sticky;top:0;}
+.admin-table td{padding:4px 8px;border-bottom:1px dotted #333;color:#ccc;}
+.admin-table tr:hover td{background:#1f1f1f;cursor:pointer;}
+.admin-table tr.me td{color:#ff5a3a;font-weight:bold;background:#2a1010;}
+.admin-detail{background:#111;border:1px solid #333;padding:10px;margin:10px;color:#7fd0ff;}
+.admin-detail .drow{margin:3px 0;}
+.admin-detail .drow b{color:#c8c8c8;display:inline-block;width:110px;}
+.admin-detail .online{color:#0a8a0a;font-weight:bold;}
+
+/* 开场恢复界面 */
+.boot-screen{
+  position:absolute;inset:0;background:#00309c;
+  display:flex;align-items:center;justify-content:center;color:#fff;
+  font-family:"Tahoma","Consolas";
+  z-index:9999;
+}
+.boot-box{
+  width:460px;background:#0a1f5c;border:1px solid #5ea8ff;
+  box-shadow:0 0 30px rgba(94,168,255,.4);padding:20px;
+}
+.boot-box h1{color:#7fd0ff;font-size:16px;letter-spacing:1px;margin-bottom:14px;border-bottom:1px solid #1d80e7;padding-bottom:6px;}
+.boot-meta{font-size:12px;line-height:1.9;color:#bcd6ff;}
+.boot-meta b{display:inline-block;width:110px;color:#7fd0ff;}
+.boot-prompt{margin-top:16px;padding:10px;background:#06184a;border:1px solid #1d80e7;font-size:12px;color:#ffe9b8;}
+.boot-actions{margin-top:14px;text-align:center;}
+.boot-actions .xp-btn{margin:0 4px;}
+.boot-log{margin-top:12px;font-size:11px;color:#7fd0ff;height:80px;overflow:auto;background:#06184a;border:1px solid #1d80e7;padding:6px;font-family:"Consolas";}
+.boot-log .line{white-space:pre-wrap;}
+
+/* 留言板 */
+.guest-list{font-size:12px;}
+.guest-item{border:1px solid #b9c9e8;padding:6px;margin-bottom:6px;background:#fff;}
+.guest-item .gh{font-weight:bold;color:#0a57d6;margin-bottom:2px;}
+.guest-item .gt{color:#888;font-size:11px;float:right;}
+.guest-form{margin-top:10px;border:1px solid #7F9DB9;padding:8px;background:#f3f6ff;}
+.guest-form input{width:120px;}
+.guest-form textarea{width:100%;margin-top:4px;}
+
+/* 友情链接 */
+.flinks{font-size:12px;line-height:2;}
+.flinks a{margin-right:8px;}
+
+/* 页脚 */
+.lo-footer{
+  background:#0a57d6;color:#bcd6ff;text-align:center;padding:8px;font-size:11px;
+  border-top:2px solid #f5a623;
+}
+.lo-footer a{color:#ffe9b8;}
+
+/* 迷态/异常文字效果 */
+.glitch{animation:flicker 3s infinite;color:#c00;}
+.hidden-link{color:#fff;text-decoration:none;}
+.hidden-link:hover{color:#c00;text-decoration:underline;}
+
+/* 提示行 */
+.hint-line{font-size:11px;color:#888;margin-top:8px;border-top:1px dashed #b9c9e8;padding-top:6px;}
+
+/* 调查员简报 */
+.brief-row{font-size:13px;line-height:2;color:#222;}
+.brief-para{font-size:13px;line-height:1.8;margin:8px 0;color:#333;}
+.brief-list{font-size:12px;line-height:1.9;color:#444;padding-left:8px;}
+.brief-sep{border-top:1px dashed #ccc;margin:10px 0;}
+.brief-content b{color:#0a57d6;}
