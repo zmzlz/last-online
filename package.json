@@ -4,7 +4,8 @@
   "name": "last-online",
   "version": "1.0.0",
   "scripts": {
-    "build": "esbuild js/app.js --bundle --format=iife --outfile=js/bundle.js"
+    "build": "esbuild js/app.js --bundle --format=iife --outfile=js/bundle.js",
+    "watch": "esbuild js/app.js --bundle --format=iife --outfile=js/bundle.js --watch"
   },
   "devDependencies": {
     "esbuild": "^0.28.2"
